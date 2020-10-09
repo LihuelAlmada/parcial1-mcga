@@ -3,9 +3,7 @@ import React from 'react';
 
 const Button = (props) => (
     <>
-    <div className="button">
-        Bon
-    </div>
+    <button className="button" color="red">{props.buttonName}</button>
     </>
 )
 export default Button;
