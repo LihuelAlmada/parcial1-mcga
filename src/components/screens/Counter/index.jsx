@@ -7,11 +7,7 @@ class Counter extends React.Component{
     super(props)
     this.state = {}
   }
-  eliminateCard(){
-    return{
-      display: 'none'
-    }
-  }
+  
   render(){
     return (
     <div className="counter">
