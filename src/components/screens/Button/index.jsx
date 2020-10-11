@@ -1,9 +1,15 @@
 import './style.css';
 import React from 'react';
 
-const Button = (props) => (
-    <>
-    <button className="button" color="red">{props.buttonName}</button>
-    </>
-)
+class Button extends React.Component{
+    constructor(props) {
+      super(props)
+      this.state = {}
+    }
+    render(){
+      return (
+        <button className="button" onClick={() => this.setState({edit: false})}>{this.props.buttonName}</button>
+      )
+    }
+}
 export default Button;
