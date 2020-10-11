@@ -25,16 +25,34 @@ class App extends React.Component{
     const newCard = this.state.card.filter(card => card.id !== id);
     this.setState({card: newCard})
   }
+  sumNumberCard = (id) => {
+    this.state.card.map(card => {
+      if (card.id === id){
+        card.number ++;
+      }
+    })
+  }
+  minusNumberCard = (id) => {
+    this.state.card.map(card => {
+      if (card.id === id){
+        card.number --;
+      }
+    })
+  }
   render(){
-    console.log(Date.now())
     return (
       <div className= "wrapper">
         <Home 
-        name={this.state.name}
-        year={this.state.year}
-        addCard={this.addCard}
+          name={this.state.name}
+          year={this.state.year}
+          addCard={this.addCard}
         />
-        <Counter card = {this.state.card} deleteCard={this.deleteCard}/>
+        <Counter 
+          card = {this.state.card} 
+          deleteCard={this.deleteCard}
+          sumNumberCard={this.sumNumberCard}
+          minusNumberCard={this.minusNumberCard}
+        />
         
       </div>      
     )
