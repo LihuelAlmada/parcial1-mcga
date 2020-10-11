@@ -12,7 +12,8 @@ class Counter extends React.Component{
     return (
     <div className="counter">
       <h1>Lista de contadores</h1>
-      { this.props.card.map(e => <CounterCard e={e} key={e.id}/>)}
+      { this.props.card.map(e => 
+      <CounterCard e={e} key={e.id} deleteCard={this.props.deleteCard}/>)}
     </div>
     )
   }

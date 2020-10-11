@@ -5,13 +5,16 @@ import ButtonCounterCard from '../ButtonCounterCard';
 class CounterCard extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {buttonCardName1: "+",buttonCardName2: "-",buttonCardName3:"Eliminar"}
+    this.state = {}
   }
   render(){
     const {e} = this.props;
     return (
     <div className="counterCard">
-       ID:{e.id}- Creado por:{e.title}-Actualizado:{e.description}<ButtonCounterCard buttonCardName = {this.state.buttonCardName1} onClick= {e.number +1}/>{e.number} <ButtonCounterCard buttonCardName = {this.state.buttonCardName2} onClick= {e.number -1}/> <ButtonCounterCard buttonCardName = {this.state.buttonCardName3}/>
+       ID:{e.id}- Creado por:{e.title}-Actualizado:{e.description}
+       <button>-</button>2
+       <button>+</button>
+       <button deleteCard={this.props.deleteCard} onClick= {this.props.deleteCard.bind(this, e.id)}>Eliminar</button>
     </div>
     )
   }

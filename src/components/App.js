@@ -11,7 +11,6 @@ class App extends React.Component{
     this.state = {name: "asd", year: 2013, card: card}
   }
   addCard = (name, year) => {
-    
     const newCard = {
       id: this.state.card.length,
       name: name,
@@ -22,7 +21,12 @@ class App extends React.Component{
       card: [...this.state.card, newCard]
     })
   }
+  deleteCard = (id) => {
+    const newCard = this.state.card.filter(card => card.id !== id);
+    this.setState({card: newCard})
+  }
   render(){
+    console.log(Date.now())
     return (
       <div className= "wrapper">
         <Home 
@@ -30,7 +34,7 @@ class App extends React.Component{
         year={this.state.year}
         addCard={this.addCard}
         />
-        <Counter card = {this.state.card}/>
+        <Counter card = {this.state.card} deleteCard={this.deleteCard}/>
         
       </div>      
     )
