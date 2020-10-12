@@ -1,5 +1,6 @@
 import './style.css';
 import React from 'react';
+
 //import ButtonCounterCard from '../ButtonCounterCard';
 
 class CounterCard extends React.Component{
@@ -15,6 +16,7 @@ class CounterCard extends React.Component{
        <button onClick={this.props.minusNumberCard.bind(this, e.id)}>-</button>{e.number}
        <button onClick={this.props.sumNumberCard.bind(this, e.id)}>+</button>
        <button onClick= {this.props.deleteCard.bind(this, e.id)}>Eliminar</button>
+       
     </div>
     )
   }

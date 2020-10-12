@@ -1,6 +1,7 @@
 import './style.css';
 import React from 'react';
 import CounterCard from '../CounterCard';
+import { Link,} from 'react-router-dom';
 
 class Counter extends React.Component{
   constructor(props) {
@@ -12,6 +13,9 @@ class Counter extends React.Component{
     return (
     <div className="counter">
       <h1>Lista de contadores</h1>
+      <Link to = "/home">
+              <button>Volver</button>
+      </Link>
       <button onClick={this.props.addCard}>Añadir contador</button>
       { this.props.card.map(e => 
       <CounterCard 

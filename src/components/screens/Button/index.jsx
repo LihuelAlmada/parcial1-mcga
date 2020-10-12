@@ -8,7 +8,7 @@ class Button extends React.Component{
     }
     render(){
       return (
-        <button className="button" onClick={() => this.setState({edit: false})}>{this.props.buttonName}</button>
+        <button className="button">{this.props.buttonName}</button>
       )
     }
 }

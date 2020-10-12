@@ -1,9 +1,9 @@
 import './style.css';
 import React from 'react';
+import { BrowserRouter, Link, Redirect, Route } from 'react-router-dom';
 import HomeCard from '../HomeCard';
 //import Button from '../Button';
 import HomeForm from '../HomeForm';
-
 
 class Home extends React.Component{
   constructor(props) {
@@ -14,12 +14,24 @@ class Home extends React.Component{
   render(){
     return (
       <div className="home">
-            <div>Alumno</div>
-        <HomeCard name = {this.props.name}year = {this.props.year}/> 
-        <HomeForm />
+        <h1 className="student">Alumno</h1>
+        {this.props.edit == false ?  
+        <HomeCard 
+          name = {this.props.name}
+          year = {this.props.year}
+          changeEdit={this.props.changeEdit}
+          setValues={this.props.setValues}
+        />:
+        <HomeForm 
+          name = {this.props.name}
+          year = {this.props.year}
+          changeEdit={this.props.changeEdit}
+          setValues={this.props.setValues}
+        />}
+        <Link to = "/counter">
+          <button>Lista de contadores</button>
+        </Link>
       </div>
-        
-      
     )
   }
 }
