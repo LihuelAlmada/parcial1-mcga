@@ -12,8 +12,8 @@ class CounterCard extends React.Component{
     return (
     <div className="counterCard">
        ID:{e.id}- Creado por:{e.title}-Actualizado:{e.description}
-       <button onClick={this.props.minusNumberCard}>-</button>{e.number}
-       <button onClick={this.props.sumNumberCard}>+</button>
+       <button onClick={this.props.minusNumberCard.bind(this, e.id)}>-</button>{e.number}
+       <button onClick={this.props.sumNumberCard.bind(this, e.id)}>+</button>
        <button onClick= {this.props.deleteCard.bind(this, e.id)}>Eliminar</button>
     </div>
     )

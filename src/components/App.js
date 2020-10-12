@@ -8,13 +8,17 @@ import card from './cards.json'
 class App extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {name: "asd", year: 2013, card: card}
+    this.state = {name: "asd", year: 2013, idCard: 2, card: card, }
   }
-  addCard = (name, year) => {
+  addCard = (name) => {
+    this.state.idCard = this.state.idCard +1;
+    console.log(this.state.idCard)
     const newCard = {
-      id: this.state.card.length,
+      id: this.state.idCard,
       name: name,
-      year: year
+      create: "10/20/2020, 8:51:45 PM",
+      update: "10/21/2020, 8:55:57 PM",
+      number: 0
     }
     console.log(newCard);
     this.setState({
@@ -26,19 +30,24 @@ class App extends React.Component{
     this.setState({card: newCard})
   }
   sumNumberCard = (id) => {
-    this.state.card.map(card => {
+    const newCard = this.state.card.map(card => {
       if (card.id === id){
         card.number ++;
       }
-    })
+      return card;
+    });
+    this.setState({card: newCard})
   }
   minusNumberCard = (id) => {
-    this.state.card.map(card => {
+    const newCard = this.state.card.map(card => {
       if (card.id === id){
         card.number --;
       }
-    })
+      return card;
+    });
+    this.setState({card: newCard})
   }
+  
   render(){
     return (
       <div className= "wrapper">
@@ -53,7 +62,6 @@ class App extends React.Component{
           sumNumberCard={this.sumNumberCard}
           minusNumberCard={this.minusNumberCard}
         />
-        
       </div>      
     )
   }
