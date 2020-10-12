@@ -12,6 +12,7 @@ class Counter extends React.Component{
     return (
     <div className="counter">
       <h1>Lista de contadores</h1>
+      <button onClick={this.props.addCard}>Añadir contador</button>
       { this.props.card.map(e => 
       <CounterCard 
         e={e} 
