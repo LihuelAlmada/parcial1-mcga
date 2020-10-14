@@ -8,3 +8,15 @@
   justify-content: flex-start;
   align-items: center;
 }
+.button{
+  width: 160px;
+  min-height: 40px;
+  margin-top: 5px;
+  border-radius: 10%;
+  border: 1px solid white;
+  background-color: white;
+}
+.button:hover{
+  border: 1px solid grey;
+  background-color: grey;
+}

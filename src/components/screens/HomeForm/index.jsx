@@ -8,10 +8,10 @@ class HomeForm extends React.Component{
   }
   render(){
     return (
-      <div>
+      <div className="homeForm">
         <input type="text" name="name" placeholder="" onChange={this.props.setValues} defaultValue={this.props.name}/> 
         <input type="text" name="year" placeholder="" onChange={this.props.setValues} defaultValue={this.props.year}/> 
-        <button onClick={this.props.changeEdit}>Guardar informacion</button>
+        <button className="button" onClick={this.props.changeEdit}>Guardar informacion</button>
       </div>
     )
   }

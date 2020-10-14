@@ -4,9 +4,9 @@ import React from 'react';
 const HomeCard = (props) => (
   <>
   <div className="homeCard">
-      <div>{props.name}</div>
-      <div>{props.year}</div>
-      <button onClick={props.changeEdit}>editar informacion</button>
+      <div>Nombre: {props.name}</div>
+      <div>Año: {props.year}</div>
+      <button className="button" onClick={props.changeEdit}>editar informacion</button>
   </div>
   </>
 )

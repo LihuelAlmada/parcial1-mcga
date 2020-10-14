@@ -28,7 +28,7 @@ class Home extends React.Component{
           setValues={this.props.setValues}
         />}
         <Link to = "/counter">
-          <button>Lista de contadores</button>
+          <button className="button green">Lista de contadores</button>
         </Link>
       </div>
     )
