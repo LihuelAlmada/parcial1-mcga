@@ -11,3 +11,9 @@
   background-color: lightgray;
 }
 
+@media(min-width: 1020px){
+  .counter{
+    width: 50%;
+  }
+}
+
