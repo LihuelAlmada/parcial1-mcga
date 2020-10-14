@@ -12,11 +12,12 @@ class CounterCard extends React.Component{
     const {e} = this.props;
     return (
     <div className="counterCard">
-       ID:{e.id}- Creado por:{e.title}-Actualizado:{e.description}
-       <button onClick={this.props.minusNumberCard.bind(this, e.id)}>-</button>{e.number}
-       <button onClick={this.props.sumNumberCard.bind(this, e.id)}>+</button>
-       <button onClick= {this.props.deleteCard.bind(this, e.id)}>Eliminar</button>
-       
+      <div>ID:{e.id}</div>
+      <div>Creado por:{e.title}</div>
+      <div>Actualizado:{e.description}</div>
+      <button className="buttonCard" onClick={this.props.minusNumberCard.bind(this, e.id)}>-</button>{e.number}
+      <button className="buttonCard" onClick={this.props.sumNumberCard.bind(this, e.id)}>+</button>
+      <button className="buttonCard" onClick= {this.props.deleteCard.bind(this, e.id)}>Eliminar</button>
     </div>
     )
   }

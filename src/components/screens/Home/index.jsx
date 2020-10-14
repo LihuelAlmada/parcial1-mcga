@@ -1,8 +1,7 @@
 import './style.css';
 import React from 'react';
-import { BrowserRouter, Link, Redirect, Route } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import HomeCard from '../HomeCard';
-//import Button from '../Button';
 import HomeForm from '../HomeForm';
 
 class Home extends React.Component{

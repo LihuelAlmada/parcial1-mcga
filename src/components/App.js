@@ -1,16 +1,14 @@
 import './reset.css';
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Link, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route } from 'react-router-dom';
 import Home from './screens/Home';
 import Counter from './screens/Counter';
-import card from './cards.json';
-import Button from '../components/screens/Button';
 
 class App extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {name: "asd", year: 2013, idCard: 2, card: card, edit: false }
+    this.state = {name: "asd", year: 2013, idCard: 0, card: [], edit: false }
   }
   addCard = () => {
     this.state.idCard = this.state.idCard +1;
@@ -54,7 +52,6 @@ class App extends React.Component{
       name: this.state.name,
       year: this.state.year,
       edit: this.state.edit ? false : true}) 
-    console.log(this.state.edit)
   }
   setValues = (e) => {
     this.setState({
