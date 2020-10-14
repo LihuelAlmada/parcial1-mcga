@@ -14,7 +14,7 @@ class Home extends React.Component{
     return (
       <div className="home">
         <h1 className="student">Alumno</h1>
-        {this.props.edit == false ?  
+        {this.props.edit === false ?  
         <HomeCard 
           name = {this.props.name}
           year = {this.props.year}

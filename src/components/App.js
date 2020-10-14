@@ -11,8 +11,7 @@ class App extends React.Component{
     this.state = {name: "asd", year: 2013, idCard: 0, card: [], edit: false }
   }
   addCard = () => {
-    this.state.idCard = this.state.idCard +1;
-    console.log(this.state.idCard)
+    this.setState({idCard: this.state.idCard + 1})
     const newCard = {
       id: this.state.idCard,
       name: this.state.name,
@@ -20,7 +19,6 @@ class App extends React.Component{
       update: "10/21/2020, 8:55:57 PM",
       number: 0
     }
-    console.log(newCard);
     this.setState({
       card: [...this.state.card, newCard]
     })
@@ -51,7 +49,8 @@ class App extends React.Component{
     this.setState({
       name: this.state.name,
       year: this.state.year,
-      edit: this.state.edit ? false : true}) 
+      edit: this.state.edit ? false : true
+    }) 
   }
   setValues = (e) => {
     this.setState({
@@ -62,7 +61,7 @@ class App extends React.Component{
     return (
       <BrowserRouter>
         <div className= "wrapper">
-        <Redirect to="/home"/>
+          <Redirect to="/home"/>
           <Route exact path="/home">
             <Home 
               name={this.state.name}
@@ -75,16 +74,15 @@ class App extends React.Component{
           </Route>
           <Route exact path="/counter">
             <Counter 
-                card = {this.state.card}
-                addCard={this.addCard}
-                deleteCard={this.deleteCard}
-                sumNumberCard={this.sumNumberCard}
-                minusNumberCard={this.minusNumberCard}
-              />
+              card = {this.state.card}
+              addCard={this.addCard}
+              deleteCard={this.deleteCard}
+              sumNumberCard={this.sumNumberCard}
+              minusNumberCard={this.minusNumberCard}
+            />
           </Route>
         </div>      
       </BrowserRouter>
-      
     )
   }
 }
