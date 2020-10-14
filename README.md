@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## The proyect
+
+You can view the proyect [HERE](https://lihuelalmada.github.io/parcial1-mcga/)
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -59,8 +59,6 @@ class App extends React.Component{
       [e.target.name]: e.target.value
     })
   }
-  
-
   render(){
     return (
       <BrowserRouter>
