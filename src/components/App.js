@@ -8,7 +8,7 @@ import Counter from './screens/Counter';
 class App extends React.Component{
   constructor(props) {
     super(props)
-    this.state = {name: "asd", year: 2013, idCard: 0, card: [], edit: false }
+    this.state = {name: "Lihuel", year: 1996, idCard: 0, card: [], edit: false }
   }
   addCard = () => {
     this.setState({idCard: this.state.idCard + 1})
