@@ -15,8 +15,8 @@ class App extends React.Component{
     const newCard = {
       id: this.state.idCard,
       name: this.state.name,
-      create: "10/20/2020, 8:51:45 PM",
-      update: "10/21/2020, 8:55:57 PM",
+      create: Date(),
+      update: Date(),
       number: 0
     }
     this.setState({
@@ -31,6 +31,7 @@ class App extends React.Component{
     const newCard = this.state.card.map(card => {
       if (card.id === id){
         card.number ++;
+        card.update = Date();
       }
       return card;
     });
@@ -40,6 +41,7 @@ class App extends React.Component{
     const newCard = this.state.card.map(card => {
       if (card.id === id){
         card.number --;
+        card.update = Date();
       }
       return card;
     });
@@ -57,6 +59,8 @@ class App extends React.Component{
       [e.target.name]: e.target.value
     })
   }
+  
+
   render(){
     return (
       <BrowserRouter>
@@ -68,7 +72,6 @@ class App extends React.Component{
               year={this.state.year}
               edit={this.state.edit}
               changeEdit={this.changeEdit}
-              saveValues={this.saveValues}
               setValues={this.setValues}
             />
           </Route>

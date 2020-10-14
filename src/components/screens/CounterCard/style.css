@@ -1,14 +1,20 @@
 .counterCard{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    height: 10%;
+    height: 20%;
     padding: 3%;
     margin-top: 1%;
     border-radius: 3%;
     background-color: white;
+}
+.grupButtonCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 .buttonCard{
     border-radius: 10%;
@@ -16,4 +22,5 @@
     border: 1px solid #7CA32F;
     background-color: white;
 }
+
 
