@@ -7,16 +7,16 @@ class CounterCard extends React.Component{
     this.state = {}
   }
   render(){
-    const {e} = this.props;
+    const {e: {name, create, update, id, number}} = this.props;
     return (
       <div className="counterCard">
-        <div>Creado por: {e.name}</div>
-        <div>Creado: {e.create}</div>
-        <div>Actualizado: {e.update}</div>
+        <div>Creado por: {name}</div>
+        <div>Creado: {create}</div>
+        <div>Actualizado: {update}</div>
         <div className="grupButtonCard">
-          <button className="buttonCard" onClick={this.props.minusNumberCard.bind(this, e.id)}>-</button>{e.number}
-          <button className="buttonCard" onClick={this.props.sumNumberCard.bind(this, e.id)}>+</button>
-          <button className="buttonCard" onClick= {this.props.deleteCard.bind(this, e.id)}>Eliminar</button>
+          <button className="buttonCard" onClick={this.props.minusNumberCard.bind(this, id)}>-</button>{number}
+          <button className="buttonCard" onClick={this.props.sumNumberCard.bind(this, id)}>+</button>
+          <button className="buttonCard" onClick= {this.props.deleteCard.bind(this, id)}>Eliminar</button>
         </div>
       </div>
     )

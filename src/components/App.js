@@ -59,6 +59,7 @@ class App extends React.Component{
       [e.target.name]: e.target.value
     })
   }
+  //cada funcion en el lugar donde se usa, usar en helpers si la uso en varios componentes
   render(){
     return (
       <BrowserRouter>
